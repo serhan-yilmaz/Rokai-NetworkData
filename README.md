@@ -38,7 +38,7 @@ This repository explains how to update the network data used in RokaiApp.
 
 ### Step 8 - Transferring the files to R
 - First, run the ``demo_transfer_to_R.m`` script on Matlab. This will prepare the files for transfer to R in the ``data/r/`` folder. 
-- Next, open the ``demo_prepare_rokai_files.R`` script on R and set the ``src`` variable to the working directory (e.g., ``C:/Users/Admin/Documents/MATLAB/Projects/Rokai_NetworkData/"``). 
+- Next, open the ``demo_prepare_rokai_files.R`` script on R and set the ``src`` variable to the working directory (e.g., ``"C:/Users/Admin/Documents/MATLAB/Projects/Rokai_NetworkData/"``). 
 - Run the ``demo_prepare_rokai_files.R`` script in R. 
 - This creates ``rokai_network_data_uniprotkb_human.rds``, ``rokai_network_data_uniprotkb_mouse.rds``, ``rokai_network_data_uniprotkb_rat.rds`` files in the ``/data/r/`` folder. 
 
