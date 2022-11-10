@@ -31,3 +31,7 @@ This repository explains how to update the network data used in RokaiApp.
 - Take note of the last modified dates of the extracted files and set the ``ptmcode_version`` variable accordingly.
 - Run the ``/src/demo_06_parse_ptmcode_networks.m`` script on Matlab. 
 - This step can be skipped entirely since PTMcode seems to stop the updates (last update date in 2014). 
+
+### Step 7 - Preparing the NetworkData
+- Run the ``demo_07_prepare_combined_network_data.m`` script on Matlab to combine all datasets into a single file. 
+
