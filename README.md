@@ -25,3 +25,9 @@ This repository explains how to update the network data used in RokaiApp.
 - Visit the [STRING download page](https://string-db.org/cgi/download), select ``Homo sapiens``, ``Mus musculus`` and ``Rattus norvegicus`` species, and download ``9606.protein.links.v11.5.txt.gz``, ``10090.protein.links.v11.5.txt.gz``, ``10116.protein.links.v11.5.txt.gz`` files. Extract their contents to the ``/data/input/string/`` folder. 
 - Take note of the last modified dates and file names of the extracted files and set the ``string_version_number`` and ``string_version_date`` variables accordingly.
 - Run the ``/src/demo_05_parse_string_ppi_network.m`` script on Matlab. 
+
+### Step 6 - PTMcode Data
+- Visit the [PTMcode download page](https://ptmcode.embl.de/data.cgi) and download ``PTMcode2_associations_within_proteins.txt.gz``, ``PTMcode2_associations_between_proteins.txt.gz`` files.  Extract their contents to the ``/data/input/ptmcode/`` folder. 
+- Take note of the last modified dates of the extracted files and set the ``ptmcode_version`` variable accordingly.
+- Run the ``/src/demo_06_parse_ptmcode_networks.m`` script on Matlab. 
+- This step can be skipped entirely since PTMcode seems to stop the updates (last update date in 2014). 
