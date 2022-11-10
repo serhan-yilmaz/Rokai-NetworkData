@@ -17,6 +17,6 @@ This repository explains how to update the network data used in RokaiApp.
 - Run the ``/src/demo_03_uniprot_id_mapping.m`` script on Matlab. 
 
 ### Step 4 - Depod Data
-- Visit [Depod download page](http://depod.bioss.uni-freiburg.de/download.php) and download the file under ``Interactions between human phosphatases and their protein substrates...```. Place the contents into the ``/data/big/`` folder. 
+- Visit [Depod download page](http://depod.bioss.uni-freiburg.de/download.php) and download the file under ``Interactions between human phosphatases and their protein substrates...``. Place the contents into the ``/data/big/`` folder. 
 - Take note of the date provided in the downloaded file name and set the ``depod_date`` and ``depod_version`` variables accordingly.
 - Run the ``/src/demo_04_parse_depod_phosphatase_substrates.m`` script on Matlab. 
