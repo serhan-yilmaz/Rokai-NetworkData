@@ -8,7 +8,7 @@ This repository explains how to update the network data used in RokaiApp.
 
 ### Step 2 - Signor Data
 - Visit the [Signor website](https://signor.uniroma2.it/downloads.php), select ``file xls (slower)`` option and download the datasets for human/mouse/rat species. Place the contents into the ``/data/big/signor/`` folder. 
-- Take note of the dates provided in the downloaded file names and set the ``signor_date`` variable accordingly.
+- Take note of the dates provided in the downloaded file names and set the ``signor_date`` and ``signor_version` variables accordingly.
 - Run the ``/src/demo_02_parse_signor_kinase_substrates.m`` script on Matlab. 
 
 ### Step 3 - Uniprot ID Mapping Data
