@@ -22,6 +22,6 @@ This repository explains how to update the network data used in RokaiApp.
 - Run the ``/src/demo_04_parse_depod_phosphatase_substrates.m`` script on Matlab. 
 
 ### Step 5 - STRING Data
-- Visit the [STRING download page](https://string-db.org/cgi/download), select ``Homo sapiens``, ``Mus musculus`` and ``Rattus norvegicus`` species, and download ``9606.protein.links.v11.5.txt.gz``, ``10090.protein.links.v11.5.txt.gz``, ``10116.protein.links.v11.5.txt.gz`` files. Extract their contents to the ``/data/big/string/`` folder. 
+- Visit the [STRING download page](https://string-db.org/cgi/download), select ``Homo sapiens``, ``Mus musculus`` and ``Rattus norvegicus`` species, and download ``9606.protein.links.v11.5.txt.gz``, ``10090.protein.links.v11.5.txt.gz``, ``10116.protein.links.v11.5.txt.gz`` files. Extract their contents to the ``/data/input/string/`` folder. 
 - Take note of the last modified dates and file names of the extracted files and set the ``string_version_number`` and ``string_version_date`` variables accordingly.
 - Run the ``/src/demo_05_parse_string_ppi_network.m`` script on Matlab. 
