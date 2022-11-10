@@ -34,4 +34,4 @@ This repository explains how to update the network data used in RokaiApp.
 
 ### Step 7 - Preparing the NetworkData
 - Run the ``demo_07_prepare_combined_network_data.m`` script on Matlab to combine all datasets into a single file. 
-
+- This creates ``/data/rokai_network_data_uniprotkb_human.mat``, ``/data/rokai_network_data_uniprotkb_mouse.mat``, ``/data/rokai_network_data_uniprotkb_rat.mat`` files. 
