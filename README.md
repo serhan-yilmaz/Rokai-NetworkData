@@ -30,7 +30,7 @@ This repository explains how to update the network data used in RokaiApp.
 - Visit the [PTMcode download page](https://ptmcode.embl.de/data.cgi) and download ``PTMcode2_associations_within_proteins.txt.gz``, ``PTMcode2_associations_between_proteins.txt.gz`` files.  Extract their contents to the ``/data/input/ptmcode/`` folder. 
 - Take note of the last modified dates of the extracted files and set the ``ptmcode_version`` variable accordingly.
 - Run the ``/src/demo_06_parse_ptmcode_networks.m`` script on Matlab. 
-- This step can be skipped entirely since PTMcode seems to stop the updates (last update date in 2014). 
+- This step can be skipped entirely since PTMcode seems to have stopped the updates (last update date in 2014). 
 
 ### Step 7 - Preparing the NetworkData
 - Run the ``demo_07_prepare_combined_network_data.m`` script on Matlab to combine all datasets into a single file. 
