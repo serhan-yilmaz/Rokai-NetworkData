@@ -3,7 +3,7 @@ warning('off', 'MATLAB:table:ModifiedVarnames');
 species_list = {'human', 'mouse', 'rat'};
 for iSpecies = 1:length(species_list)
     species = species_list{iSpecies};
-    fprintf('[Running] Parsing STRING PPI Network - %s\n', species)
+    fprintf('[Running] Preparing NetworkData - %s\n', species)
     % Load networks
     dataFolder = '../data/processed/';
     PSP = load([dataFolder, 'signor/psp_signor_sites_and_ks_network_', species, '.mat']);
@@ -208,12 +208,16 @@ for iSpecies = 1:length(species_list)
     NetworkData.nPhosphatase = DEPOD.Stats.nPhosphatase;
     NetworkData.nGene = height(Gene);
     NetworkData.Stats = PSP.Stats;
+    NetworkData.Stats.nProtein = length(unique(Site.Protein));
+    NetworkData.Stats.nSiteWithKinase = nnz(sum(NetworkData.Wkin2site, 1)>0);
+    NetworkData.Stats.nProteinWithKinase = length(unique(NetworkData.Site.Protein(sum(NetworkData.Wkin2site, 1)>0)));
     NetworkData.Stats.nnzPPI = nnz(NetworkData.Wkin2kin);
     NetworkData.Stats.nnzPPI_phospha = nnz(NetworkData.Wkin2kin_phospha);
     NetworkData.Stats.nnzPTMcodeCoev = nnz(NetworkData.Wsite2site_coev);
     NetworkData.Stats.nnzPTMcodeSD = nnz(NetworkData.Wsite2site_sd);
     NetworkData.Stats.nPhosphatase = DEPOD.Stats.nPhosphatase;
     NetworkData.Stats.nSiteWithPhospha = DEPOD.Stats.nSite;
+    NetworkData.Stats.nProteinWithPhospha = length(unique(NetworkData.Site.Protein(sum(NetworkData.Wphospha2site, 1)>0)));
     NetworkData.Stats.nnzDEPOD = DEPOD.Stats.nnzTotal;
     NetworkData.Versions = struct();
     NetworkData.Versions.version_uniprot = uniprot_version;

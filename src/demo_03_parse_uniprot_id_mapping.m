@@ -1,6 +1,6 @@
 warning('off', 'MATLAB:table:ModifiedVarnames');
 %%
-uniprot_version = '2022-10-04';
+uniprot_version = '2024-07-13';
 species_list = {'human', 'mouse', 'rat'};
 for iSpecies = 1:length(species_list)
     species = species_list{iSpecies};
@@ -46,9 +46,12 @@ for iSpecies = 1:length(species_list)
     [~, indices_last] = unique(UniprotTable.TypeIndex, 'last');
     indices_last = [0; indices_last];
     
-    [~, selectedTypes] = ismember({'Ensembl_PRO', 'Gene_Name', 'Gene_Synonym', 'UniProtKB-ID'}, types);
+    [~, selectedTypes] = ismember({'Ensembl_PRO', 'Gene_Name', 'Gene_Synonym', 'UniProtKB-ID', 'MGI', 'RGD'}, types);
     % selectedTypes = 1:length(types); % For all types
-    
+    if(nnz(selectedTypes == 0) > 0)
+        warning('%d of the selected types are not found in %s dataset', nnz(selectedTypes == 0), species)
+    end
+    selectedTypes = selectedTypes(selectedTypes > 0);
 
     S = struct();
     for iType = selectedTypes

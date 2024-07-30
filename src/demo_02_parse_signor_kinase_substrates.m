@@ -1,7 +1,7 @@
 warning('off', 'MATLAB:table:ModifiedVarnames');
 %%
-signor_date = '10_11_22';
-signor_version = '2022-11-10';
+signor_date = '30_07_24';
+signor_version = '2024-07-30';
 species_list = {'human', 'mouse', 'rat'};
 for iSpecies = 1:length(species_list)
     species = species_list{iSpecies};

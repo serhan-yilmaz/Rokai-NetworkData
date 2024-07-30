@@ -1,7 +1,7 @@
 warning('off', 'MATLAB:table:ModifiedVarnames');
 %%
-string_version_number = 'v11.5';
-string_version_date = '2021-10-21';
+string_version_number = 'v12.0';
+string_version_date = '2023-05-15';
 species_list = {'human', 'mouse', 'rat'};
 for iSpecies = 1:length(species_list)
     species = species_list{iSpecies};
